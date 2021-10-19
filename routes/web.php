@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DiscordNotificationDemo;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('discord-notification', [DiscordNotificationDemo::class, 'index']);
+Route::get('slide-into-dm', [DiscordNotificationDemo::class, 'slide_into_dm']);
